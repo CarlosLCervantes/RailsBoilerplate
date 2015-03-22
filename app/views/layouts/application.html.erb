@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Limitless</title>
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+    <div id="wrap" ng-app="airenvyApp"> <!-- wrap -->
+      <%= yield :before_header %>
+      <%#= render "layouts/alerts" %>
+      <%#= render "layouts/header" %>
+      <div id="main">
+        <%= yield %>
+      </div>
+      <%#= render "layouts/footer" %>
+    </div> <!-- /wrap -->
+</body>
+</html>
